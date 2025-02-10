@@ -10,10 +10,12 @@ html {
 body {
     background: #080808;
     color: #fff;
+    overflow-x: hidden;
 }
 
 .container {
-    padding: 5px 5%;
+    width: 100%;
+    padding: 10px 5%;
 }
 nav {
     display: flex;
@@ -59,12 +61,15 @@ h1 {
     justify-content: center;
     color: #ffcc00;
 }
+
 /*-------about----*/
 #About {
     color: gray;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
 }
 .title {
     font-size: 30px;
@@ -72,15 +77,20 @@ h1 {
     color: #ffcc00;
 }
 .about-col-1 p {
-    font-size: 22px;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px 0;
+    max-width: 100%;
 }
 .tab-titles {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0 40px;
 }
 .tab-links {
-    margin-right: 50px;
-    font-size: 20px;
+    margin: 10px 0;
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -126,7 +136,7 @@ h1 {
 }
 .services-list div {
     background: #262626;
-    padding: 30px;
+    padding: 20px;
     font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
@@ -206,7 +216,7 @@ nav .fas {
 }
 
 /*-------css for small screens-----*/
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 600px) {
     nav .fas {
         display: block;
         font-size: 25px;
@@ -231,6 +241,12 @@ nav .fas {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    .about-col-1 p {
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 12px;
     }
 }
 @media (min-width: 601px) and (max-width: 768px) {
